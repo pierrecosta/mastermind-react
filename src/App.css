@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.gameContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-flow: row wrap;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+  background-color: GhostWhite;
+}
+.gameHeader {
+  flex: 1 1 100%;
+  padding: 1%; 
+  text-decoration: solid seagreen underline;
 }
 
-.App-link {
-  color: #61dafb;
+.pageContainerLeft {
+  flex: 0 0 65%;
+  padding: 1%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pageContainerRight {
+  flex: 0 0 30%;
+  padding: 1%;
+}
+
+.pageContainerBottom {
+  flex: 1 1 100%;
+  padding: 1%;
+}
+
+.userInputContainer {
+  display: flex;
+  flex: 0 0 100%;
+  flex-flow: row wrap;
+  margin: 0 auto;
+}
+
+.orderContainer {
+  flex: 1 0 25%;
+  padding: 1%;
+}
+
+.gameFooter {
+  flex: 1 1 100%;
+  padding: 1%;
+}
+
+.codeContainer, .solutionContainer {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(1rem, 1fr));
+  grid-template-rows: repeat(10, minmax(1rem, 1fr));
+  grid-gap: 1%;
+}
+
+.codeItem, .solutionItem {
+  height: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: whitesmoke;
+  font: 1em sans-serif;
+}
+
+.userContainer {
+  display: grid; 
+  grid-template-columns: repeat(4, minmax(1rem, 1fr));
+  grid-template-rows: 1, minmax(1rem, 1fr);
+  grid-gap: 1%;
+}
+
+.userItem, .userColorPick {
+  border-radius: 100%;
+  padding: 1rem;
+  background-color: whitesmoke;
+}
+
+.colorPickContainer {
+  display: flex;
+  flex: 0 0 100%;
+  flex-flow: row wrap;
+  margin: auto;
+}
+
+.colorPickItem {
+  flex: 0 0 13%;
+  padding: 1%;
+  border-radius: 100%;
+  background-color: Azure;
 }

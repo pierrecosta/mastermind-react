@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Game from './components/Game';
+import PlayAgain from "./components/PlayAgain";
 
-function App() {
+const App = () => {
+  const [gameId, setGameId] = useState(1);
+  const [gameStatus, setGameStatus] = useState('active'); //'active' 'won' or 'lost'
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>
+        CSS only (not really (not at all)) Responsive Tables
+      </h1>
+      <h2>
+        <PlayAgain gameStatus={gameStatus} onClick={() => {setGameId(gameId + 1); setGameStatus('active'); }}/>
+      </h2>
+      <Game key={gameId} setGameStatus={setGameStatus} gameStatus={gameStatus} />
+    </>
   );
-}
+};
 
 export default App;
